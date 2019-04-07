@@ -1,0 +1,24 @@
+* C:\Users\Stephen Johnston\Desktop\School Stuff\Quarter 8\ECE411\amplifier_circuit_input.asc
+Q1 N003 N004 N006 0 2N3904
+R1 N006 0 100
+R2 N004 0 2.5k
+R3 N001 N004 6000
+R4 N001 N003 500
+C1 N006 0 100µ
+C2 N004 Vin 1µ
+V1 Vin N007 SINE(0 10m 60)
+V2 N001 0 5
+Q2 N002 N003 N005 0 2N3904
+R5 N005 0 500
+R6 N001 N002 1000
+C3 N005 0 100µ
+R7 Vout 0 10k
+C4 Vout N002 1µ
+R8 N002 N003 5000
+R9 N007 0 10k
+.model NPN NPN
+.model PNP PNP
+.lib C:\Users\Stephen Johnston\Documents\LTspiceXVII\lib\cmp\standard.bjt
+.tran 0 100m 10m
+.backanno
+.end
